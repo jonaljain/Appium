@@ -1,0 +1,58 @@
+What is appium?
+Appium is an open source Mobile automation tool for testing native apps (android and iOS) and mobile browser.
+Appium internally uses WebDriver JSON wire (Which Selenium does) to test the apps. So it is just like selenium but for mobile.
+
+Appium Features:
+- Open source mobile automation tool.
+- The only cross platform supporting tool
+- Works for nativ, hybrid and mobile web apps
+- Supports Web Driver API - Selenium Family
+
+Supported platforms:
+- Android
+- iOS
+- Firefox OS
+
+- We can write code in any language supported by WebDriver: JAVA, C#, Ruby, Python, JavaScript.
+
+Appium Internal Architecture:
+
+Appium Client Code
+	||
+	||
+             JSON
+	||
+	||
+	\/
+        Appium Server
+         ||                   ||
+         ||                   ||
+         \/                  \/
+UIAutomator2       XCUITest
+Android                 iOS
+
+Appium Client Code -> This is where we write the code
+Appium Server -> IS heart of the architecture. This server will listen to Client code
+JSON -> When we send our code appium wrap our code and convert it into JSON and send it to the server (For all the language)
+And server redirect those actions to mobile, collect those response and send it back to the editor.
+UIAutomator2 is provided by Android to test android apps and XCUITest is provided by iOS to test iOS apps.
+
+Installation and Configuration:
+- Download Java
+- Set Env Variable for JAVA Home path.
+- Download Android Studio
+//Intel® HAXM installation failed. To install Intel® HAXM follow the instructions found at: https://github.com/intel/haxm/wiki/Installation-Instructions-on-Windows
+- Download Node
+- add Env variables for Android SDK, SDK\bin\tool, sdk\bin, sdk\platform-tools
+- Add env variable for node home, npm\bin path
+- npm is a command line installer with that we can install or download any node module
+- Open Android Studio and create a virtual device.
+- Install appium using node ==> npm install -g appium
+- Download any editor, preferred IntellijIDEA,Eclipse
+- create a Maven project. add testNG and appium dependencies in pom.xml
+- download testNg plugin
+
+
+
+
+
